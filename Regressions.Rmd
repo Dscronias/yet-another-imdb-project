@@ -1,0 +1,38 @@
+---
+title: "IMDb Regressions"
+output: html_document
+---
+
+
+```{r, include=FALSE}
+library(arrow)
+library(survey)
+library(magrittr)
+library(dplyr)
+library(labelled)
+
+df <- arrow::read_feather("./Data/Final/to_R.feather")
+
+mask = c("main_genre", "isAdult", "startYear")
+df[mask] = df[mask] %>% lapply(., to_factor)
+colnames(df)
+```
+```{r}
+regression = lm(averageRating~runtimeMinutes+main_genre, data=df)
+summary(regression)
+#R-squared 0.16
+```
+```{r}
+regression = lm(averageRating~runtimeMinutes+main_genre, data=df, weights=numVotes)
+summary(regression)
+#R-squared 0.23
+```
+```{r, include=FALSE}
+df_strat <- svydesign(id=~1, weights=~numVotes, data=df)
+
+cbind(
+  svyby(~averageRating, ~mainstream, df_strat, svymean),
+  confint(svyby(~averageRating, ~mainstream, df_strat, svymean))
+) %>% select(-se)
+```
+
