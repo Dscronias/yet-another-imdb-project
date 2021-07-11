@@ -41,9 +41,9 @@
      id="namedview296"
      showgrid="false"
      inkscape:zoom="0.39038187"
-     inkscape:cx="683.75046"
-     inkscape:cy="510.15495"
-     inkscape:window-x="-8"
+     inkscape:cx="487.55607"
+     inkscape:cy="485.00974"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg294"
@@ -803,5 +803,18 @@
            id="path286" />
       </g>
     </g>
+  </g>
+  <g
+     class="ytick"
+     id="g185-2"
+     transform="translate(162.8796,-86.918917)">
+    <text
+       text-anchor="end"
+       x="513.19025"
+       y="146.89999"
+       style="font-size:12px;font-family:'Open Sans', verdana, arial, sans-serif;text-anchor:end;white-space:pre;opacity:1;fill:#f2f5fa;fill-opacity:1"
+       id="text183-8"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+         id="tspan762-3">Number of movies per year</tspan></text>
   </g>
 </svg>
